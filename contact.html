@@ -1,0 +1,210 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+		</script>
+		<style>
+		.container{
+		background-color:white;
+		display:flex;
+		justify-content:left;
+		align-items:left;
+		padding:5px;
+		width: 50%;
+		margin: 1px auto;
+		overflow:visible;
+		}
+		.container img{
+		max width:5px;
+		height:200px;
+		float:left;
+		}
+		.grid-container {
+		  display: grid;
+		  column-gap: 50px;
+		  grid-template-columns: auto auto auto;
+		  background-color:white;
+		  padding: 10px;
+		}
+
+		.grid-item {
+		  background-color: rgba(255, 255, 255, 0.8);
+		  border: 1px solid rgba(0, 0, 0, 0.8);
+		  padding: 20px;
+		  font-size: 30px;
+		  text-align: center;
+		}
+		.fa {
+		  padding: 20px;
+		  font-size: 30px;
+		  width: 70px;
+		  text-align: center;
+		  text-decoration: none;
+		  margin: 9px 10px;
+		  justify-content: center;
+		   align-items: center;
+		  border-radius: 50%;
+		 display: inline-flex;
+			
+			white-space: nowrap;
+			overflow: hidden;
+			box-shadow: 5px 5px 8px rgba(0,0,0,0.9);
+			transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+		}
+
+		.fa:hover {
+			opacity: 0.7;
+		}
+		.fa-youtube {
+		  background: #bb0000;
+		  color: white;
+
+		}
+
+		.fa-instagram {
+		  background: #125688;
+		  color: white;
+		  
+		}
+		.button:hover {
+		  background-color: #04AA6D; /* Green */
+		  color: white;
+		}
+		</style>
+		</head>
+		<body>
+		<div class=container >
+		<img src=logo.jpg height=100 width=150 >
+		<div class=text>
+		<P>
+		<h1 align=center style="color:#29AB87"> SANJU FITNESS </h1>
+		<h3 align=center style="color:#3F704D"> welcome to fitness club </h3>
+		</div>
+		</P>
+		</div>
+		<div class="grid-container">
+		  <div class="grid-item">
+		<h1 style="color:#29AB87"> call: </h1>
+		<h1 style="color:#29AB87">6364498639 </h1>
+		<h3>phone lines are open
+		Mon-Fri: 7am-7pm & Sat-Sun: 8am-3pm</h3>  
+		  </div>
+		  <div class="grid-item"><h1 style="color:#29AB87"> Whatsapp: </h1>
+		<h1 style="color:#29AB87">6364498639 </h1>
+		<h3>...it's the quickest way
+		to get through to our team!</h3></div>
+		  <div class="grid-item">
+		  <h1 style="color:#29AB87"> Email: </h1>
+		  <h1 style="color:#29AB87">thesanju03@gmail.com </h1>
+		<h3>We will respond to 
+		your email within 24 hours</h3></div>
+		  </div>
+		  
+		  <section style="background-color:#ACE1AF">
+			<h1  align=center style="color:#29AB87; font-size:50px"><b> ...or fill out the form below, and one of our team will get back to you.</b> </h1>
+		<center>
+
+		<form ng-app="myApp" ng-controller="validateCtrl" 
+		name="myForm" novalidate>
+
+		<p style="font-size:35px"> <b>Username:</b><br>
+		<input type="text"  name="user" ng-model="user" required>
+		<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+		<span ng-show="myForm.user.$error.required">Username is required.</span>
+		</span>
+		</p>
+
+		<p style="font-size:35px"> <b>Email: </b><br>
+		<input type="email" name="email" ng-model="email" required>
+		<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+		<span ng-show="myForm.email.$error.required">Email is required.</span>
+		<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+		</span>
+		<p style="font-size:35px"> <b>I AM INTRESTED IN :</b><br>
+		  <select ng-model="myVar">
+			<option value="">
+			<option value="Personaltraining">Personal training
+			<option value="Groupclass">Group class
+			<option value="Onlinemembership">Online membership
+		  </select>
+		  </p>
+		<p>
+		<div ng-switch="myVar">
+		  <div ng-switch-when="Personaltraining">
+			 <p>you are selected Personal training.</p>
+		  </div>
+		  <div ng-switch-when="Groupclass">
+			 <p> you are  selected  Group class</p>
+		  </div>
+		  <div ng-switch-when="Onlinemembership">
+			 <p> you are  selected  Online membership</p>
+		  </div>
+		</div>
+
+		<label style="font-size:35px" > <b> Phone Number :</b><br>	
+				<input type="tel"
+					   name="phone"
+					   ng-model="phone"
+					   ng-pattern="/^[0-9]*$/"
+					   ng-required="true"
+					   ng-minlength=6
+					   ng-maxlength=20> 
+				<span ng-show="formname.phone.$error.pattern"
+					  style="color:red">Phone number can have only digits.
+				</span> 
+				<span ng-show="formname.phone.$error.maxlength"
+					  style="color:red">Minimum 10 characters required.
+				</span>
+				<br>
+			</label>
+			<p style="font-size:35px" ><b> Preferred </b><br>
+			 <input type="radio" ng-model="myVar" value="StrangthTraining">Strangth Training 
+		  <input type="radio" ng-model="myVar" value="Crossfit">Cross Training 
+		  <div ng-switch="myVar">
+		  <div ng-switch-when="StrangthTraining">
+			 <p>Selected Strangth Training</p>
+		  </div>
+		  <div ng-switch-when="Crossfit">
+			 <p>Selected Cross fit.</p>
+		  </div>
+		</div>
+			<br>
+			<label style="font-size:35px" ><b> Message </b> <br></label ><br>
+			<input type="text"><br>
+			
+			<br>
+		<input type="submit" onclick="alert('we will contact you soon !')
+		ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+		myForm.email.$dirty && myForm.email.$invalid">
+		</p>
+
+		</form>
+		</center>
+		<script>
+		var app = angular.module('myApp', []);
+		app.controller('validateCtrl', function($scope) {
+			$scope.user = 'sanjay';
+			$scope.email = 'thesanju03@gmail.com';
+		});
+		</script>
+
+
+		</section>
+		<h1 align=center style="color:#29AB87">Join the Fit With Me team</h1>
+		<p align=center>We are always looking to add motivated and passionate people to our team. For more information about roles we are hiring at the moment,<span style="color:#29AB87"> visit the 'Join Us' page.</span></p>
+		<footer>
+		<p align=center>&copy;2024 Sanju fitness  </p>
+		<section style="align-items:center">
+		<center>
+		<a  href="https://www.youtube.com/channel/UCqqP48t1QQhJMB30AGml1MQ" class="fa fa-youtube" ></a>
+		<a href="https://www.instagram.com/thesanju03?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" class="fa fa-instagram"></a>
+		</center>
+		</section>
+
+		</footer>
+		</body>
+		</html>
+
+

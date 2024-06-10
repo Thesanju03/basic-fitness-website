@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<title >
+</title>
+<script>
+$(".hover").mouseleave(
+  function() {
+    $(this).removeClass("hover");
+  }
+);
+
+</script>
+
+<style>
+.container{
+display:flex;
+justify-content:left;
+align-items:left;
+padding:5px;
+width: 50%;
+margin: 1px auto;
+overflow:visible;
+}
+.container img{
+max width:5px;
+height:200px;
+float:left;
+}
+#login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #d5d5d5;
+}
+.button {
+  background-color: #29AB87;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+
+}
+footer{
+   padding: 10px 20px;
+        background: #2e8b57;
+        color: white;
+		text-align:center;
+      }
+#login-form h1 { margin: 0 0 20px 0; }
+#login-form input {
+  width: 100%;
+  padding: 10px;
+}
+#login-form input[type=email], #login-form input[type=password] {
+  border: 1px solid #ededed;
+  margin-bottom: 10px;
+}
+#login-form input[type=submit] {
+  margin-top: 10px;
+  border: 0;
+  color: #fff;
+  background: #5b77bd;
+  cursor: pointer;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('sport-fitness-health-marketing-background-illustration-workout-website-G0XGKE.jpg');
+  
+}
+.button:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200);
+.js {
+  font-family: 'Montserrat', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  background: #000;
+}
+
+.js *,
+.js:before,
+.js:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.js img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+.js:before,
+.js:after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  content: '';
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+}
+
+.js:before {
+  width: 0;
+  height: 1px;
+}
+
+.js:after {
+  height: 0;
+  width: 1px;
+}
+
+.js figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 20px;
+}
+
+.js h3,
+.js h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: normal;
+  opacity: 0;
+}
+
+.js h4 {
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+.js a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.js:hover img,
+.js.hover img {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  opacity: 0.2;
+}
+
+.js:hover:before,
+.js.hover:before,
+.js:hover:after,
+.js.hover:after {
+  opacity: 1;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.js:hover:before,
+.js.hover:before {
+  width: 40px;
+}
+
+.js:hover:after,
+.js.hover:after {
+  height: 40px;
+}
+
+.js:hover h3,
+.js.hover h3,
+.js:hover h4,
+.js.hover h4 {
+  opacity: 1;
+}
+
+.js:hover h3,
+.js.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.js:hover h4,
+.js.hover h4 {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+</style>
+<body>
+<div class=container >
+<img src="C:\Users\SANJAY\Downloads\logo-removebg-preview (1).png" height=100 width=150 >
+<div class=text>
+<P>
+<h1 align=center style="color:#29AB87"> SANJU FITNESS </h1>
+<h3 align=center style="color:#3F704D"> welcome to fitness club </h3>
+</div>
+</P>
+</div>
+<form id="login-form" onsubmit="return login()">
+  <h1>LOGIN</h1>
+  <input type="email" placeholder="Email" name="email" required>
+  <input type="password" placeholder="Password" name="password" required>
+  <input type="submit" value="Sign In">
+<p align=center>&copy; SANJU FITNESS </p>
+</form>
+
+<figure class="js">
+  <img src="C:\Users\SANJAY\Downloads\20240308_104956-01.jpeg"  alt="sanjaypic" />
+  <figcaption>
+    <h3>SANJAY</h3>
+    <h4>Founder</h4>
+  </figcaption>
+  <a href="file:///C:/Users/SANJAY/Downloads/aboutus.html"></a>
+</figure>
+<figure class="js "><img src="C:\Users\SANJAY\Downloads\2179eb2bc538cd1fe8e28481dd4c44e7.jpg" height=405 width=700  alt="gym" />
+  <figcaption>
+    <h3>Sanju Fitness</h3>
+    <h4>Gym</h4>
+  </figcaption>
+</figure>
+</body>
+</html>
